@@ -58,7 +58,7 @@ Route::get('logout',[
 
 Route::get('dashboard', [
 
-	'uses' => 'UserController@dashboard',
+	'uses' => 'DashboardController@dashboard',
 	'as'   => 'Dashboard',
 	//'middleware' => ['auth']
 
