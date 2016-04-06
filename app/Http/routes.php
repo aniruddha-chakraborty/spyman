@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// API route
+Route::group([
+    'prefix' => 'API/V1.1',
+    'namespace' => 'API\V1',
+    //'middleware' => 'oauth'
+],
+    function () {
+        Route::resource('complain', 'ComplainController');
+    }
+);
