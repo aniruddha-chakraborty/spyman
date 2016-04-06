@@ -12,7 +12,7 @@ use App\User;
 class UserController extends Controller
 {
     protected $user_table;
-    protected $loginPath = '/login'; 
+    protected $loginPath = 'login';
 
     public function __construct() {
 

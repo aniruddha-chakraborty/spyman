@@ -25,12 +25,14 @@ Route::group([
 	    //'middleware' => 'oauth'
 	],
     function () {
-        Route::resource('complain', 'ComplainController');
+        Route::get('complain/{id}', 'ComplainController@show');
+		Route::post('complain/vat', 'ComplainController@vatComplain');
+		Route::post('complain/general', 'ComplainController@generalComplain');
     }
 );
 
 
-Route::get('/login',[
+Route::get('login',[
 
 	'uses' => 'UserController@login',
 	'as'   => 'Login',
@@ -38,7 +40,7 @@ Route::get('/login',[
 
 ]);
 
-Route::post('/postLogin',[
+Route::post('postLogin',[
 
 	'uses' => 'UserController@postLogin',
 	'as'   => 'postLogin',
@@ -46,10 +48,10 @@ Route::post('/postLogin',[
 
 ]);
 
-Route::get('/dashboard', [
+Route::get('dashboard', [
 
 	'uses' => 'UserController@dashboard',
 	'as'   => 'Dashboard',
-	'middleware' => ['auth']
+	//'middleware' => ['auth']
 
 ]);
