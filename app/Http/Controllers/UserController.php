@@ -41,6 +41,15 @@ class UserController extends Controller
 
     }
 
+    // login route
+    public function logout() {
+
+        Auth::logout();
+
+        return redirect()->intended('login');
+
+    }
+
     public function dashboard(){
 
             echo 'dashboard!';

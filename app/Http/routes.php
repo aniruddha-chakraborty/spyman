@@ -48,6 +48,14 @@ Route::post('postLogin',[
 
 ]);
 
+Route::get('logout',[
+
+	'uses' => 'UserController@logout',
+	'as'   => 'Logout',
+	'middleware' => ['guest']
+
+]);
+
 Route::get('dashboard', [
 
 	'uses' => 'UserController@dashboard',
