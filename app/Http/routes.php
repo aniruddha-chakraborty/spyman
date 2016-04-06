@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 
+Route::resource('complain', 'Complain\ComplainController');
+
 // API route
 Route::group([
     'prefix' => 'API/V1.1',
