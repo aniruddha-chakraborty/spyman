@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
 
         //$this->call(CreateUsersTable::class);
         $this->call(ComplainTableSeeder::class);
-
+        
         Model::reguard();
     }
 }
