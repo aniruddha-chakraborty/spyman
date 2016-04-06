@@ -17,10 +17,10 @@ class UsersTableSeeder extends Seeder
 
 			   DB::table('users')->insert([
 
-			   				'name'	   => $faker->name,
-			                'username' => $faker->userName,
-			                'password' => Hash::make('123456'),
-			                'type'	   => rand(0,1)
+	   				'name'	   => $faker->name,
+	                'username' => $faker->userName,
+	                'password' => Hash::make('123456'),
+	                'type'	   => rand(0,1)
 			    
 			    ]);
 
