@@ -26,10 +26,14 @@ class ComplainController extends Controller
      */
     public function store(ComplainRequest $request)
     {
+//        echo '<pre>';
+//        print_r($request->all());
+//        echo '</pre>';
+
         $message = []; // empty array
 
         try {
-            $this->complain_table->complainer_name = $this->complainer_name;
+            $this->complain_table->complainer_name = $request->complainer_name;
             $this->complain_table->complainer_mobile = $request->complainer_mobile;
             $this->complain_table->token_id = $request->token_id;
             $this->complain_table->vat_reg_id = $request->vat_reg_id;
@@ -41,11 +45,11 @@ class ComplainController extends Controller
 
             if($result) {
                 // set the message
-                $message['message'] = 'Medicine(s) added to my dispensary/wish list.';
+                $message['message'] = 'Your complain in process. Please collect the ';
                 $message['status_code'] = 201;
             } else{
                 // set the message
-                $message['message'] = 'Medicine can\'t added to my dispensary/wish list!';
+                $message['message'] = 'Your complain can\'t added to my dispensary/wish list!';
                 $message['status_code'] = 422;
             }
 
