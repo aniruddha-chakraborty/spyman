@@ -29,6 +29,51 @@ class ComplainModel extends Model
     }
 
     /**
+     * Get all of the complain info
+     *
+     * @return resource
+     */
+    public function getInprocessComplain()
+    {
+        $query = DB::table($this->table);
+        $query->select('*');
+        $query->where('status', 'processing');
+        $result = $query->paginate(20);
+
+        return $result;
+    }
+
+    /**
+     * Get all of the complain info
+     *
+     * @return resource
+     */
+    public function getInComplainInfo()
+    {
+        $query = DB::table($this->table);
+        $query->select('*');
+        $query->where('status', 'incomplete');
+        $result = $query->paginate(20);
+
+        return $result;
+    }
+
+    /**
+     * Get all of the complain info
+     *
+     * @return resource
+     */
+    public function getAllCompletedComplain()
+    {
+        $query = DB::table($this->table);
+        $query->select('*');
+        $query->where('status', 'completed');
+        $result = $query->paginate(20);
+
+        return $result;
+    }
+
+    /**
      * Get the individual complain by token id
      *
      * @param $token_id

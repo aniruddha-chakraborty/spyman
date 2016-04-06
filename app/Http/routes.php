@@ -16,7 +16,37 @@ Route::get('/', function () {
 });
 
 
-Route::resource('complain', 'Complain\ComplainController');
+//Route::get('complain/all', 'Complain\ComplainController');
+
+// complains route
+Route::group([
+		'prefix' => 'complain',
+		'namespace' => 'Complain',
+		//'middleware' => 'oauth'
+	],
+	function () {
+		Route::get('all',[
+			'uses' => 'ComplainController@allComplain',
+			'as'   => 'all-complains'
+		]);
+		Route::get('inprocess',[
+			'uses' => 'ComplainController@inprocessComplain',
+			'as'   => 'inprocess'
+		]);
+		Route::get('incomplete',[
+			'uses' => 'ComplainController@incompleteComplain',
+			'as'   => 'incomplete'
+		]);
+		Route::get('completed',[
+			'uses' => 'ComplainController@completedComplain',
+			'as'   => 'completed'
+		]);
+		Route::get('find/{id}',[
+			'uses' => 'ComplainController@getIndividualComplain',
+			'as'   => 'individual'
+		]);
+	}
+);
 
 // API route
 Route::group([

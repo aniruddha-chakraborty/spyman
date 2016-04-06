@@ -5,10 +5,10 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
             <a href="index.html">
-                <img src="{!! URL::asset('assets/admin/layout/img/logo.png') !!}" alt="logo" class="logo-default"/>
+                {{--<img src="{!! URL::asset('assets/admin/layout/img/logo.png') !!}" alt="logo" class="logo-default"/>--}}
+                <h4>Spyman</h4>
             </a>
-            <div class="menu-toggler sidebar-toggler hide">
-            </div>
+            <div class="menu-toggler sidebar-toggler hide"></div>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN RESPONSIVE MENU TOGGLER -->
