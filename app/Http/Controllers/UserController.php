@@ -50,12 +50,6 @@ class UserController extends Controller
 
     }
 
-    public function dashboard(){
-
-            echo 'dashboard!';
-
-    }
-
     public function nid_search($nid) {
 
 
