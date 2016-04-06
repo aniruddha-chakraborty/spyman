@@ -17,18 +17,18 @@ class ComplainRequest extends Request
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Get the validation rules that apphttp://localhost/spyman/public/API/V1.1/complain/ly to the request.
      *
      * @return array
      */
     public function rules()
     {
         return [
-            'complainer_name' => 'alpha',
+            'complainer_name' => 'required',
             'complainer_mobile' => 'required',
             'token_id' => 'required',
             'vat_reg_id' => 'required',
-            'institute_name' => 'alpha',
+            'institute_name' => 'required',
             'address' => 'required',
             'complain' => 'required',
             'complain_type' => 'required'
