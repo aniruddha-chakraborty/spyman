@@ -28,7 +28,7 @@ class UserController extends Controller
     }
 
     // login post login
-    public function postLogin(Request $request) {   
+    public function postLogin(Request $request) {
 
             $username = $request->username;
             $password = $request->password;
@@ -48,6 +48,7 @@ class UserController extends Controller
     }
 
     public function nid_search($nid) {
+
 
 
     }
