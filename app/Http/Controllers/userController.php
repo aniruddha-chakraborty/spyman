@@ -8,7 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
 use App\User;
-
+use Auth;
 class UserController extends Controller
 {
     protected $user_table;
@@ -47,4 +47,8 @@ class UserController extends Controller
 
     }
 
+    public function nid_search($nid) {
+
+
+    }
 }
