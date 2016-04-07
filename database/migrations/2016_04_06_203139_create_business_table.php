@@ -16,7 +16,7 @@ class CreateBusinessTable extends Migration
         
             $table->increments('id')->unique();
             $table->string('full_name');
-            $table->string('nid')->unique();
+            $table->string('nid');
             $table->string('business_name');
             $table->string('business_type');
             $table->integer('trade_licence');

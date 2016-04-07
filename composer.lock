@@ -4,8 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "05405be9d908318414c6759e47d2d125",
-    "content-hash": "1a9ad5c54ac12df6a8230dd1cd0ba6a8",
+    "hash": "709241e60b370498485d5d2ad8b28823",
+    "content-hash": "ce8f6a3bcea917060eacd9f7aa90fed3",
+
     "packages": [
         {
             "name": "backup-manager/backup-manager",
@@ -966,10 +967,17 @@
             "require": {
                 "ext-tokenizer": "*",
                 "php": ">=5.4"
+<<<<<<< HEAD
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
             },
+=======
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+>>>>>>> a01bb749d2885fea9b87cf8ad4bfb0e16948fa3f
             "bin": [
                 "bin/php-parse"
             ],
@@ -2202,12 +2210,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
+<<<<<<< HEAD
+                "reference": "684eab1624a66a4c37762c747c88a7f8664c65bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/684eab1624a66a4c37762c747c88a7f8664c65bf",
+                "reference": "684eab1624a66a4c37762c747c88a7f8664c65bf",
+=======
                 "reference": "318bbc590285b7fd3e12de74cc84908747ca5508"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/318bbc590285b7fd3e12de74cc84908747ca5508",
                 "reference": "318bbc590285b7fd3e12de74cc84908747ca5508",
+>>>>>>> a01bb749d2885fea9b87cf8ad4bfb0e16948fa3f
                 "shasum": ""
             },
             "require": {
@@ -2244,7 +2261,11 @@
                 "faker",
                 "fixtures"
             ],
+<<<<<<< HEAD
+            "time": "2016-04-06 16:46:55"
+=======
             "time": "2016-04-06 16:35:51"
+>>>>>>> a01bb749d2885fea9b87cf8ad4bfb0e16948fa3f
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -2290,6 +2311,46 @@
                 "test"
             ],
             "time": "2015-05-11 14:41:42"
+        },
+        {
+            "name": "hedronium/casus",
+            "version": "v1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Hedronium/Casus.git",
+                "reference": "c36f53ad367ff38b496f5e39f735efbe6f9c35c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Hedronium/Casus/zipball/c36f53ad367ff38b496f5e39f735efbe6f9c35c8",
+                "reference": "c36f53ad367ff38b496f5e39f735efbe6f9c35c8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mcrypt": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "hedronium\\Casus\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Omran Jamal",
+                    "email": "o.jamal97@gmail.com"
+                }
+            ],
+            "description": "A Library to Generate anything Random.",
+            "time": "2015-10-10 11:39:18"
         },
         {
             "name": "mockery/mockery",

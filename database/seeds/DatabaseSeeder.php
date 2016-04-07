@@ -17,6 +17,14 @@ class DatabaseSeeder extends Seeder
         //$this->call(CreateUsersTable::class);
         $this->call(ComplainTableSeeder::class);
         $this->call(UsersTableSeeder::class);
+        $this->call(PeopleSeeder::class);
+        $this->call(PeopleFamilyUpdate::class);
+        $this->call(RajukSeeder::class);
+        $this->call(LandSeeder::class);
+        $this->call(ServiceSeeder::class);
+        $this->call(BusinessSeeder::class);
+        $this->call(BrtaSeeder::class);
+        $this->call(MarrigeSeeder::class);
 
         Model::reguard();
     }

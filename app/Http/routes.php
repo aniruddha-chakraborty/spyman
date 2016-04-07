@@ -93,3 +93,10 @@ Route::get('dashboard', [
 	//'middleware' => ['auth']
 
 ]);
+
+Route::get('profile/:nid',[
+
+	'uses' => 'UserController@profile',
+	'as'   => 'Profile',
+	'middleware' => ['auth']
+]);
