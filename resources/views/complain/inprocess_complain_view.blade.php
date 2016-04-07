@@ -21,7 +21,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="portlet-body">
+                    <div class="portlet-body table-responsive">
                         <table class="table table-striped table-hover" id="sample_5">
                             <thead>
                                 <tr>

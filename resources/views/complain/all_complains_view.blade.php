@@ -21,19 +21,20 @@
                     </a>
                 </div>
             </div>
-            <div class="portlet-body">
+            <div class="portlet-body table-responsive">
                 <table class="table table-striped table-hover" id="sample_5">
                     <thead>
                     <tr>
-                        <th>Complain type</th>
+                        <th>Type</th>
                         <th>Complainer</th>
-                        <th title="Vomplainer Mobile Number">Mobile</th>
+                        <th title="Complainer Mobile Number">Mobile</th>
                         <th>Institute</th>
-                        <th title="Vomplainer Address">Address</th>
+                        <th title="Complainer Address">Address</th>
                         <th>Token</th>
                         <th>VAT reg.</th>
                         <th>Complain</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
 
@@ -49,6 +50,9 @@
                             <td>{!! $complain->vat_reg_id !!}</td>
                             <td>{!! $complain->complain !!}</td>
                             <td>{!! $complain->status !!}</td>
+                            <td>
+                                {!! link_to_route('dashboard.medicine.group.edit', 'Change status', $group->id, ['class' => 'btn btn-success']) !!}
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

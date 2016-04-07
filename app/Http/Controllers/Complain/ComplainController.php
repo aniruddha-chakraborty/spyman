@@ -93,10 +93,12 @@ class ComplainController extends Controller
      */
     public function getIndividualComplain($id)
     {
-        $complain = $this->complain_table->find($id);
+        $data['complain'] = $this->complain_table->find($id);
 
-        echo '<pre>';
-        print_r($complain);
-        echo '</pre>';
+//        echo '<pre>';
+//        print_r($complain);
+//        echo '</pre>';
+
+        return view('complain.status_change_view')->with($data);
     }
 }
