@@ -50,9 +50,9 @@ class UserController extends Controller
 
     }
 
-    public function nid_search($nid) {
+    public function profile($nid) {
 
-
+        
 
     }
 }
