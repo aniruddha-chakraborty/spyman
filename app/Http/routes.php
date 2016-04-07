@@ -45,6 +45,10 @@ Route::group([
 			'uses' => 'ComplainController@getIndividualComplain',
 			'as'   => 'individual'
 		]);
+		Route::patch('change',[
+			'uses' => 'ComplainController@updateStatusChangeInfo',
+			'as'   => 'update-status'
+		]);
 	}
 );
 
@@ -90,7 +94,7 @@ Route::get('dashboard', [
 
 	'uses' => 'DashboardController@dashboard',
 	'as'   => 'Dashboard',
-	//'middleware' => ['auth']
+	'middleware' => ['auth']
 
 ]);
 

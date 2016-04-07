@@ -34,6 +34,7 @@
                                     <th>VAT reg.</th>
                                     <th>Complain</th>
                                     <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
 
@@ -49,6 +50,9 @@
                                         <td>{!! $complain->vat_reg_id !!}</td>
                                         <td>{!! $complain->complain !!}</td>
                                         <td>{!! $complain->status !!}</td>
+                                        <td>
+                                            <a class="btn btn-primary" href="{!! URL::route('individual', $complain->id) !!}">Chage status</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
