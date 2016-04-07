@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BusinessSeeder::class);
         $this->call(BrtaSeeder::class);
         $this->call(MarrigeSeeder::class);
+        $this->call(InvoiceSeeder::class);
 
         Model::reguard();
     }
