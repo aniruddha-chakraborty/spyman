@@ -41,7 +41,7 @@ class User extends Model implements AuthenticatableContract,
     public function get_profile_data($nid) {
 
          return  DB::table('people')
-                ->where('people.nid', '=', $nid)
+                ->where('nid', '=', $nid)
                 ->get();
     }
 

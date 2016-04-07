@@ -1360,7 +1360,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
                                 <div class="profile-usertitle-name">
-                                    Marcus Doe
+                                    {{!!  !!}}
                                 </div>
                                 <div class="profile-usertitle-job">
                                     Developer
@@ -1402,7 +1402,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <!-- END PORTLET MAIN -->
                         <!-- PORTLET MAIN -->
-                        <div class="portlet light">
+                        <div class="pssortlet light">
                             <!-- STAT -->
                             <div class="row list-separated profile-stat">
                                 <div class="col-md-4 col-sm-4 col-xs-6">

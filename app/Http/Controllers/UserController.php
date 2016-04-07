@@ -59,14 +59,15 @@ class UserController extends Controller
         $get_business = $this->user_table->get_business($nid);
         $brta       = $this->user_table->get_brta($nid);
         $marrige    = $this->user_table->marrige($nid);
-    
+       
         return view('profile.profile_view')
                     ->with('people',$people)
                     ->with('rajuk',$rajuk)
                     ->with('land',$land)
                     ->with('service',$service)
                     ->with('brta',$brta)
-                    ->with('marrige',$marrige);
+                    ->with('marrige',$marrige)
+                    ->with('get_business',$get_business);
 
     }
 
