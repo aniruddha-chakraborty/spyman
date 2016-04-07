@@ -94,7 +94,7 @@ Route::get('dashboard', [
 
 ]);
 
-Route::get('profile/:nid',[
+Route::get('profile/{id}',[
 
 	'uses' => 'UserController@profile',
 	'as'   => 'Profile',
