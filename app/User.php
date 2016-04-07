@@ -40,12 +40,13 @@ class User extends Model implements AuthenticatableContract,
     public function get_profile_data($nid) {
 
          return  DB::table('people')
-                ->join('rajuk', 'people.nid', '=', 'rajuk.nid'),
-                ->join('land', 'people.id', '=', 'land.nid'),
-                ->join('business', 'people.id', '=', 'business.nid'),
-                ->join('brta', 'people.id', '=', 'brta.nid'),
-                ->join('service', 'people.id', '=', 'service.nid'),
+                ->join('rajuk', 'people.nid', '=', 'rajuk.nid')
+                ->join('land', 'people.id', '=', 'land.nid')
+                ->join('business', 'people.id', '=', 'business.nid')
+                ->join('brta', 'people.id', '=', 'brta.nid')
+                ->join('service', 'people.id', '=', 'service.nid')
                 ->join('marrige', 'people.id', '=', 'marrige.nid')
+                ->where('people.nid', '=', $nid)
                 ->get();
 
     }

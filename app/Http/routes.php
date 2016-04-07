@@ -16,19 +16,53 @@ Route::get('/', function () {
 });
 
 
-	// API route
+//Route::get('complain/all', 'Complain\ComplainController');
+
+// complains route
+Route::group([
+		'prefix' => 'complain',
+		'namespace' => 'Complain',
+		//'middleware' => 'oauth'
+	],
+	function () {
+		Route::get('all',[
+			'uses' => 'ComplainController@allComplain',
+			'as'   => 'all-complains'
+		]);
+		Route::get('inprocess',[
+			'uses' => 'ComplainController@inprocessComplain',
+			'as'   => 'inprocess'
+		]);
+		Route::get('incomplete',[
+			'uses' => 'ComplainController@incompleteComplain',
+			'as'   => 'incomplete'
+		]);
+		Route::get('completed',[
+			'uses' => 'ComplainController@completedComplain',
+			'as'   => 'completed'
+		]);
+		Route::get('find/{id}',[
+			'uses' => 'ComplainController@getIndividualComplain',
+			'as'   => 'individual'
+		]);
+	}
+);
+
+// API route
 Route::group([
 	    'prefix' => 'API/V1.1',
 	    'namespace' => 'API\V1',
 	    //'middleware' => 'oauth'
 	],
     function () {
-        Route::resource('complain', 'ComplainController');
+        Route::get('complain/{id}', 'ComplainController@show');
+		Route::post('complain/vat', 'ComplainController@vatComplain');
+		Route::post('complain/general', 'ComplainController@generalComplain');
     }
 );
 
 
-Route::get('/login',[
+Route::get('login',[
 
 	'uses' => 'UserController@login',
 	'as'   => 'Login',
@@ -36,7 +70,7 @@ Route::get('/login',[
 
 ]);
 
-Route::post('/postLogin',[
+Route::post('postLogin',[
 
 	'uses' => 'UserController@postLogin',
 	'as'   => 'postLogin',
@@ -44,10 +78,18 @@ Route::post('/postLogin',[
 
 ]);
 
-Route::get('/dashboard', [
+Route::get('logout',[
 
-	'uses' => 'UserController@dashboard',
+	'uses' => 'UserController@logout',
+	'as'   => 'Logout',
+	'middleware' => ['guest']
+
+]);
+
+Route::get('dashboard', [
+
+	'uses' => 'DashboardController@dashboard',
 	'as'   => 'Dashboard',
-	'middleware' => ['auth']
+	//'middleware' => ['auth']
 
 ]);
