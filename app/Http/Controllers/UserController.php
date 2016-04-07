@@ -52,7 +52,14 @@ class UserController extends Controller
 
     public function profile($nid) {
 
-        
+        $this->user_table->
+        //return view('profile');    
 
     }
+
+    public function search() {
+
+        return view('search');
+    }
+
 }

@@ -71,8 +71,20 @@
                             <i class="icon-home"></i>
                             Completed</a>
                     </li>
+
                 </ul>
             </li>
+
+            <li class="start active open">
+                <a href="{!! URL::route('Search') !!}">
+                    <i class="icon-home"></i>
+                    <span class="title">Search</span>
+                    <span class="selected"></span>
+                    <span class="arrow open"></span>
+                </a>
+            </li>
+
+
         </ul>
         <!-- END SIDEBAR MENU -->
     </div>

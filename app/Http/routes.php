@@ -94,9 +94,18 @@ Route::get('dashboard', [
 
 ]);
 
-Route::get('profile/:nid',[
+Route::get('profile/{nid}',[
 
 	'uses' => 'UserController@profile',
 	'as'   => 'Profile',
 	'middleware' => ['auth']
 ]);
+
+Route::get('search',[
+
+	'uses' => 'UserController@search',
+	'as'   => 'Search',
+	'middleware' => ['auth']
+]);
+
+
