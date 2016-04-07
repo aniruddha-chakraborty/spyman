@@ -62,6 +62,8 @@ Route::group([
         Route::get('complain/{id}', 'ComplainController@show');
 		Route::post('complain/vat', 'ComplainController@vatComplain');
 		Route::post('complain/general', 'ComplainController@generalComplain');
+		Route::get('invoice/check/{id}', 'InvoiceController@tokenIDCheck');
+		Route::post('invoice', 'InvoiceController@store');
     }
 );
 
