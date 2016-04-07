@@ -101,4 +101,44 @@ class ComplainController extends Controller
 
         return view('complain.status_change_view')->with($data);
     }
+
+    /**
+     * Display the individual complain information
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateStatusChangeInfo(Request $request)
+    {
+        $complain = $this->complain_table->find($request->id);
+
+        $message = []; // empty array
+
+        try {
+            $complain->status = $request->status;
+            $result = $complain->save();
+
+            if($result) {
+                // set the message
+                $message['message'] = 'Complain status updated!';
+                $message['status_code'] = 200;
+            } else{
+                // set the message
+                $message['message'] = 'Complain status can\'t update!';
+                $message['status_code'] = 400;
+            }
+
+        } catch(Exception $ex) {
+            // set the flash message
+            $message['message'] = $ex->getMessage();
+            $message['status_code'] = $ex->getCode();
+
+        } finally {
+            // set the flash message
+            session()->flash('message', $message);
+
+            // return back
+            return redirect()->back();
+        }
+    }
 }

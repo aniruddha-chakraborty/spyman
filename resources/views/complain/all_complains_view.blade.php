@@ -1,7 +1,7 @@
 @extends('master_view')
 
 @section('container')
-        <!-- BEGIN PAGE CONTENT-->
+<!-- BEGIN PAGE CONTENT-->
 <div class="row">
     <div class="col-md-12">
         <!-- BEGIN EXAMPLE TABLE PORTLET-->
@@ -51,7 +51,7 @@
                             <td>{!! $complain->complain !!}</td>
                             <td>{!! $complain->status !!}</td>
                             <td>
-                                {!! link_to_route('dashboard.medicine.group.edit', 'Change status', $group->id, ['class' => 'btn btn-success']) !!}
+                                <a class="btn btn-primary" href="{!! URL::route('individual', $complain->id) !!}">Chage status</a>
                             </td>
                         </tr>
                     @endforeach

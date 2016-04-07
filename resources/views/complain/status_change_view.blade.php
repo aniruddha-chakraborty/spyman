@@ -55,14 +55,17 @@
                         <td>Complain</td>
                         <td>: {!! $complain->complain !!}</td>
                     </tr>
-                    <form>
+                    <form action="{!! URL::route('update-status') !!}" method="post">
+                        <input type="hidden" value="PATCH" name="_method">
+                        <input type="hidden" value="{!! $complain->id !!}" name="id">
+                        {!! csrf_field() !!}
                         <tr>
                             <td>Status</td>
                             <td>
                                 <select name="status" class="form-control">
-                                    <option value="processing">Processing</option>
-                                    <option value="incomplete">Incomplete</option>
-                                    <option value="completed">Completed</option>
+                                    <option value="processing" @if($complain->status == 'processing') selected @endif>Processing</option>
+                                    <option value="incomplete" @if($complain->status == 'incomplete') selected @endif>Incomplete</option>
+                                    <option value="completed" @if($complain->status == 'completed') selected @endif>Completed</option>
                                 </select>
                             </td>
                         </tr>
