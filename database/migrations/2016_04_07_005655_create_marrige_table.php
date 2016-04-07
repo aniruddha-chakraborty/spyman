@@ -15,10 +15,12 @@ class CreateMarrigeTable extends Migration
         Schema::create('marrige', function (Blueprint $table) {
         
             $table->increments('id')->unique();
-            $table->string('full_name_male');
-            $table->string('full_name_female');
-            $table->string('male_nid');
-            $table->string('female_nid');
+            $table->string('people_1_name');
+            $table->string('people_2_name');
+            $table->string('people_1_nid');
+            $table->string('people_2_nid');
+            $table->tinyInteger('people_1_gender');
+            $table->tinyInteger('people_2_gender');
             $table->timestamps();
         
         });

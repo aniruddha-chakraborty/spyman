@@ -52,8 +52,21 @@ class UserController extends Controller
 
     public function profile($nid) {
 
-
-        return view('profile.profile_view');
+        $people = $this->user_table->get_profile_data($nid);
+        $rajuk  = $this->user_table->get_rajuk($nid);
+        $land   = $this->user_table->get_land($nid);
+        $service = $this->user_table->get_service($nid);
+        $get_business = $this->user_table->get_business($nid);
+        $brta       = $this->user_table->get_brta($nid);
+        $marrige    = $this->user_table->marrige($nid);
+    
+        return view('profile.profile_view')
+                    ->with('people',$people)
+                    ->with('rajuk',$rajuk)
+                    ->with('land',$land)
+                    ->with('service',$service)
+                    ->with('brta',$brta)
+                    ->with('marrige',$marrige);
 
     }
 
