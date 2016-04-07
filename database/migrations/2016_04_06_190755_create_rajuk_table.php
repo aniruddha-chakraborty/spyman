@@ -16,7 +16,7 @@ class CreateRajukTable extends Migration
         Schema::create('rajuk', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('nid')->unique();
+            $table->string('nid');
             $table->longText('data');
             $table->longText('address');
             $table->integer('price');

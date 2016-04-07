@@ -23,6 +23,7 @@ class CreatePeopleTable extends Migration
             $table->string('mother_id');
             $table->string('f_h');
             $table->tinyInteger('type');
+            $table->tinyInteger('gender');
             $table->rememberToken();
             $table->timestamps();
         });

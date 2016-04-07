@@ -17,7 +17,7 @@ class CreateServiceTable extends Migration
         
             $table->increments('id')->unique();
             $table->string('full_name');
-            $table->string('nid')->unique();
+            $table->string('nid');
             $table->integer('salary');
             $table->string('job_info');
             $table->timestamps();
@@ -31,7 +31,7 @@ class CreateServiceTable extends Migration
      *
      * @return void
      */
-    
+
     public function down()
     {
         Schema::drop('service');

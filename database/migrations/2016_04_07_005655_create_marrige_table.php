@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLandTable extends Migration
+class CreateMarrigeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,15 @@ class CreateLandTable extends Migration
      */
     public function up()
     {
-        Schema::create('land', function (Blueprint $table) {
+        Schema::create('marrige', function (Blueprint $table) {
+        
             $table->increments('id')->unique();
-            $table->string('full_name');
-            $table->string('nid');
-            $table->longText('land_info');
-            $table->longText('address');
-            $table->integer('price');
+            $table->string('full_name_male');
+            $table->string('full_name_female');
+            $table->string('male_nid');
+            $table->string('female_nid');
             $table->timestamps();
+        
         });
     }
 
@@ -30,8 +31,6 @@ class CreateLandTable extends Migration
      */
     public function down()
     {
-    
-        Schema::drop('land');
-    
+        Schema::drop('marrige');
     }
 }

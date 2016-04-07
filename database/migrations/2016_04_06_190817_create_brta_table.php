@@ -17,7 +17,7 @@ class CreateBrtaTable extends Migration
         
             $table->increments('id')->unique();
             $table->string('full_name');
-            $table->string('nid')->unique();
+            $table->string('nid');
             $table->string('car_model');
             $table->string('car_price');
             $table->integer('price');
