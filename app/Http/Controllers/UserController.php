@@ -73,7 +73,7 @@ class UserController extends Controller
 
     public function search() {
 
-        return view('search');
+        return view('nid_search');
     }
 
 }
